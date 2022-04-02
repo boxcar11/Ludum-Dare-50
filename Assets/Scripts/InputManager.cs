@@ -8,6 +8,8 @@ public class InputManager : MonoBehaviour
     [SerializeField] private GameObject craftingPanel;
     [SerializeField] private GameObject craftedItemPanel;
 
+    Interactable interactable; 
+
     private bool inventoryBool = false;
     private bool craftingBool = false;
     // Start is called before the first frame update
@@ -29,8 +31,18 @@ public class InputManager : MonoBehaviour
             craftingBool = !craftingBool;
         }
 
+        if(Input.GetButtonDown("Action"))
+        {
+            interactable.Interact();
+        }
+
         inventoryPanel.SetActive(inventoryBool);
         craftingPanel.SetActive(craftingBool);
         craftedItemPanel.SetActive(craftingBool);
+    }
+
+    public void SetInteractable(Interactable i)
+    {
+        interactable = i;
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Item> playerItems = new List<Item>();
+    [SerializeField] private List<Item> playerItems = new List<Item>();
+    [SerializeField] private UIInventory inventoryUI;
     ItemDatabase itemDatabase;
 
     void Awake()
@@ -12,15 +13,24 @@ public class Inventory : MonoBehaviour
         itemDatabase = FindObjectOfType<ItemDatabase>();
     }
 
+    void Start()
+    {
+        GiveItem(1);
+        GiveItem(3);
+    }
+
+
     public void GiveItem(int id)
     {
         Item itemToAdd = itemDatabase.GetItem(id);
+        inventoryUI.AddItemToUI(itemToAdd);
         playerItems.Add(itemToAdd);
     }
 
     public void GiveItem(string itemName)
     {
         Item itemToAdd = itemDatabase.GetItem(itemName);
+        inventoryUI.AddItemToUI(itemToAdd);
         playerItems.Add(itemToAdd);
     }
 
@@ -37,5 +47,11 @@ public class Inventory : MonoBehaviour
         {
             playerItems.Remove(itemToRemove);
         }
+    }
+
+    public void AddItem(int id)
+    {
+        Item itemToAdd = itemDatabase.GetItem(id);
+        playerItems.Add(itemToAdd);
     }
 }

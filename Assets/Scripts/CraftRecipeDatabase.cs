@@ -35,6 +35,12 @@ public class CraftRecipeDatabase : MonoBehaviour
                 0, 0, 0,
                 0, 3, 0,
                 0, 0, 0
+            }),
+            new CraftRecipe(2, new int[]
+            {
+                0, 0, 0,
+                0, 3, 0,
+                0, 1, 0
             })
         };
     }

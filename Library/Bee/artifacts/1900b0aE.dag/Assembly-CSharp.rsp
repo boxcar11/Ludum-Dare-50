@@ -343,13 +343,20 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/AnimalController.cs"
 "Assets/Scripts/BunnyController.cs"
+"Assets/Scripts/CraftingSlots.cs"
 "Assets/Scripts/CraftRecipe.cs"
 "Assets/Scripts/CraftRecipeDatabase.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Inventory.cs"
 "Assets/Scripts/Item.cs"
 "Assets/Scripts/ItemDatabase.cs"
+"Assets/Scripts/ItemFollowMouse.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/SlotPanel.cs"
+"Assets/Scripts/Tooltip.cs"
+"Assets/Scripts/UICraftResult.cs"
+"Assets/Scripts/UIInventory.cs"
+"Assets/Scripts/UIItem.cs"
 -langversion:8.0
 
 /deterministic

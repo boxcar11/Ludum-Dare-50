@@ -28,7 +28,9 @@ public class ItemDatabase : MonoBehaviour
             new Item(1, "Wood", "Stack of wood", new Dictionary<string, int>{{"Fuel", 15}}),
             new Item(2, "Cooked Meat", "Tastes like chicken", new Dictionary<string, int>{{"Food", 20}}),
             new Item(3, "Raw Rabbit", "Cook before eating", new Dictionary<string, int>()),
-            new Item(4, "Berry", "Berry greatness", new Dictionary<string, int>{{"Food", 5}})
+            new Item(4, "Berry", "Berry greatness", new Dictionary<string, int>{{"Food", 5}}),
+            new Item(5, "Murky water", "Doesn't look good enough to drink", new Dictionary<string, int>{{"Water", -10}}),
+            new Item(6, "Water", "Clear fresh water", new Dictionary<string, int>{{"Water", 5}})
         };
     }
 }

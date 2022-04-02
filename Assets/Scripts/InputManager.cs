@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject craftingPanel;
     [SerializeField] private GameObject craftedItemPanel;
+    [SerializeField] private GameObject bodyPanel;
 
     Interactable interactable; 
 
@@ -37,6 +38,7 @@ public class InputManager : MonoBehaviour
         }
 
         inventoryPanel.SetActive(inventoryBool);
+        bodyPanel.SetActive(inventoryBool);
         craftingPanel.SetActive(craftingBool);
         craftedItemPanel.SetActive(craftingBool);
     }

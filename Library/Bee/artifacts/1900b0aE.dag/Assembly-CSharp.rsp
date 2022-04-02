@@ -343,6 +343,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/AnimalController.cs"
 "Assets/Scripts/BunnyController.cs"
+"Assets/Scripts/BushController.cs"
 "Assets/Scripts/CraftingSlots.cs"
 "Assets/Scripts/CraftRecipe.cs"
 "Assets/Scripts/CraftRecipeDatabase.cs"

@@ -347,6 +347,7 @@
 "Assets/Scripts/CraftRecipe.cs"
 "Assets/Scripts/CraftRecipeDatabase.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/InputManager.cs"
 "Assets/Scripts/Inventory.cs"
 "Assets/Scripts/Item.cs"
 "Assets/Scripts/ItemDatabase.cs"

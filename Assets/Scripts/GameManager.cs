@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -60,5 +61,20 @@ public class GameManager : MonoBehaviour
         {
             thirst = 100;
         }
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+
+            UnityEditor.EditorApplication.isPlaying = false;
+
+        #endif
+            Application.Quit();
     }
 }

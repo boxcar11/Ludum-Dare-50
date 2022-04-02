@@ -34,7 +34,10 @@ public class InputManager : MonoBehaviour
 
         if(Input.GetButtonDown("Action"))
         {
+            if(interactable != null)
+            {
             interactable.Interact();
+            }
         }
 
         inventoryPanel.SetActive(inventoryBool);

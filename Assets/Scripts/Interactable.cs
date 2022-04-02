@@ -6,7 +6,7 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField] InputManager inputManager;
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
         {
@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D()
+    void OnTriggerExit2D()
     {
         inputManager.SetInteractable(null);
     }

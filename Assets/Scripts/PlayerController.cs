@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    Inventory inventory;
     GameManager gameManager;
     [SerializeField] private float moveSpeed;
     // Start is called before the first frame update
     void Start()
     {
+        inventory = FindObjectOfType<Inventory>();
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -27,8 +28,9 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.tag == "Animal")
         {
-            gameManager.AddFood(other.gameObject.GetComponent<AnimalController>().GetFoodValue());
+            inventory.GiveItem(other.gameObject.GetComponent<AnimalController>().GetItemName());
             //Debug.Log("Collided with animal");
+            Destroy(other.gameObject);
         }
     }
 }

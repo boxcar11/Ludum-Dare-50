@@ -357,6 +357,7 @@
 "Assets/Scripts/SlotPanel.cs"
 "Assets/Scripts/Tooltip.cs"
 "Assets/Scripts/TreeController.cs"
+"Assets/Scripts/UIBody.cs"
 "Assets/Scripts/UICraftResult.cs"
 "Assets/Scripts/UIInventory.cs"
 "Assets/Scripts/UIItem.cs"

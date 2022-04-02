@@ -14,6 +14,7 @@ public class UIItem : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, 
     private Tooltip tooltip;
 
     public bool craftedItemSlot = false;
+    public bool bodyItemSlot = false;
 
     private void Awake()
     {
@@ -47,7 +48,7 @@ public class UIItem : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, 
     {
         if(this.item != null)
         {
-            if(selectedItem.item != null && !craftedItemSlot)
+            if(selectedItem.item != null && !craftedItemSlot && !bodyItemSlot)
             {
                 Item clone = new Item(selectedItem.item);
                 selectedItem.UpdateItem(this.item);
@@ -60,14 +61,22 @@ public class UIItem : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, 
                 {
                     GetComponent<UICraftResult>().CollectCraftResult(this.item);
                 }
+                
                 UpdateItem(null);
             }
+           
         }
         else if(selectedItem.item != null && !craftedItemSlot)
         {
+            
             UpdateItem(selectedItem.item);
             selectedItem.UpdateItem(null);
+            if(bodyItemSlot)
+            {
+                GetComponent<UIBody>().feedBody(this.item);
+            }
         }
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)

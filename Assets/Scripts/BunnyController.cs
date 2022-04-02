@@ -5,7 +5,6 @@ using UnityEngine;
 public class BunnyController : AnimalController
 {
     Vector3 wanderPoint;
-
     
     [SerializeField] float moveSpeed;
 

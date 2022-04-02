@@ -52,4 +52,13 @@ public class GameManager : MonoBehaviour
             hunger = 100;
         }
     }
+
+    public void AddWater(float water)
+    {
+        thirst += water;
+        if(thirst >= 100)
+        {
+            thirst = 100;
+        }
+    }
 }

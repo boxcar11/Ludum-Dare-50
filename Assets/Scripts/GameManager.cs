@@ -9,10 +9,14 @@ public class GameManager : MonoBehaviour
     public Slider healthSlider;
     public Slider hungerSlider;
     public Slider thirstSlider;
+    public GameObject bunnyPrefab;
 
     [SerializeField] private float health, hunger, thirst;
 
     [SerializeField] private float hungerRate, thirstRate;
+
+    [SerializeField] private float animalreleaseTimer;
+    private float animalTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +46,14 @@ public class GameManager : MonoBehaviour
         {
             health -= .005f;
             thirst = 0;
+        }
+
+        animalTimer -= Time.deltaTime;
+
+        if(animalTimer <= 0)
+        {
+            animalTimer = animalreleaseTimer;
+            Instantiate(bunnyPrefab, new Vector3(Random.Range(-20, 20), Random.Range(-20, 20), 0) ,Quaternion.identity);
         }
     }
 

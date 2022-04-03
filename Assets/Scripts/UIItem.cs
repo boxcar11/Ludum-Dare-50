@@ -91,4 +91,9 @@ public class UIItem : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, 
     {
         tooltip.gameObject.SetActive(false);
     }
+
+    public int CheckForItem()
+    {
+        return item.id;
+    }
 }

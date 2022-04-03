@@ -5,6 +5,10 @@ using UnityEngine;
 public class FishingController : Interactable
 {
     private Inventory inventory;
+    public Sprite fishLeft, fishRight, fishUp, fishDown; 
+    public Sprite fishEmote;
+    public SpriteRenderer sr;
+    public SpriteRenderer emote;
     private bool fishing = false;
     private bool fishOnLine = false;
     private float castTimer;
@@ -26,12 +30,15 @@ public class FishingController : Interactable
             {
                 //Bobber move
                 fishOnLine = true;
+                emote.sprite = fishEmote;
+                emote.gameObject.SetActive(true);
                 reelTimer -= Time.deltaTime;
 
                 if(reelTimer <= 0)
                 {
                     fishing = false;
                     fishOnLine = false;
+                    emote.gameObject.SetActive(false);
                 }
             }
         }
@@ -45,16 +52,50 @@ public class FishingController : Interactable
             reelTimer = 5;
             fishing = true;
             //Cast line
+            sr.GetComponent<Animator>().enabled = false;
+
+            Vector3 direction = Vector3.Normalize(sr.transform.position - this.transform.position);
+            float degree = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            if(degree < 0)
+            {
+                degree = 360 + degree;
+            }
+            Debug.Log(degree);
+            float absoluteX = Mathf.Abs(direction.x);
+            float absoluteY = Mathf.Abs(direction.y);
+
+            if(degree < 300 && degree > 240)
+            {
+                sr.sprite = fishUp; 
+            }
+            else if(degree <  240 && degree > 120)
+            {
+                sr.sprite = fishRight;
+            }
+            else if(degree < 120 && degree > 60)
+            {
+                sr.sprite = fishDown;
+            }
+            else
+            {
+                sr.sprite = fishLeft;
+            }
+            
+            
         }
         else
         {
             //Reel in line
             if(fishOnLine)
             {
-                fishOnLine = false;
-                fishing = false;
                 inventory.GiveItem("Berry");
             }
+
+            fishOnLine = false;
+            fishing = false;
+            emote.gameObject.SetActive(false);
+
+            sr.GetComponent<Animator>().enabled = true;
         }
     }
 }

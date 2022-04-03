@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
+        GetComponentInChildren<Animator>().SetFloat("MoveX", horizontal);
+        GetComponentInChildren<Animator>().SetFloat("MoveY", vertical);
+
         Vector2 direction = new Vector2(horizontal, vertical);
         transform.Translate(direction * moveSpeed * Time.deltaTime);
     }

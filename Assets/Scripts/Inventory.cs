@@ -18,6 +18,8 @@ public class Inventory : MonoBehaviour
         GiveItem(1);
         GiveItem(3);
         GiveItem(5);
+        GiveItem(7);
+        GiveItem(8);
     }
 
 

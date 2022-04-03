@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BushController : Interactable
 {
+    public Sprite bush;
+    public Sprite berryBush;
+
+    public SpriteRenderer spriteRenderer;
     private bool pickable = true;
     private float timer;
     [SerializeField] float pickableTime = 60;
@@ -24,6 +28,7 @@ public class BushController : Interactable
         if(timer <= 0)
         {
             pickable = true;
+            spriteRenderer.sprite = berryBush;
         }
     }
 
@@ -38,6 +43,7 @@ public class BushController : Interactable
             }
 
             pickable = false;
+            spriteRenderer.sprite = bush;
             timer = pickableTime;
         }
     }

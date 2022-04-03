@@ -77,8 +77,7 @@ Library\Bee\artifacts\movedfrom\UnityEngine.VirtualTexturingModule.dll_356906273
 Library\Bee\artifacts\movedfrom\UnityEngine.VRModule.dll_12642130392942922784.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEngine.WindModule.dll_7402245736825045308.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEngine.XRModule.dll_16298704764663929214.movedfrom
-Library\Bee\artifacts\movedfrom\UnityEditor.Android.Extensions.dll_2522008157173988304.movedfrom
-Library\Bee\artifacts\movedfrom\UnityEditor.LinuxStandalone.Extensions.dll_17085071404220508072.movedfrom
+Library\Bee\artifacts\movedfrom\UnityEditor.OSXStandalone.Extensions.dll_12042926490646779427.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEditor.UWP.Extensions.dll_13832896135880297763.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEditor.WebGL.Extensions.dll_4217380136682620296.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEditor.WindowsStandalone.Extensions.dll_1326230419694156920.movedfrom

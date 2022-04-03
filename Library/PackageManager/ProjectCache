@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637844583822022760
-    m_Hash: 3578706231
+      ticks: 637845423167748198
+    m_Hash: 1145376283
   m_LockFileStatus:
     m_FilePath: C:/Users/Boxca/Documents/Unity/Ludum Dare 50/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637844584300206297
-    m_Hash: 1641269152
+      ticks: 637845423167748198
+    m_Hash: 1282305619
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
